@@ -8,6 +8,7 @@ patches:
     apiVersion: v1
     kind: ServiceAccount
     metadata:
+      name: controller
       annotations:
         azure.workload.identity/client-id: 60aeee65-3bad-4416-90b6-3fe8c002bbc2
         azure.workload.identity/tenant-id: 5065c9ac-40a7-4f0b-9284-a95db9cdaab7
@@ -18,6 +19,7 @@ patches:
     apiVersion: apps/v1
     kind: Deployment
     metadata:
+      name: controller
       labels:
         azure.workload.identity/use: "true"
     spec:
