@@ -3,3 +3,28 @@ kind: Kustomization
 resources:
 - gotk-components.yaml
 - gotk-sync.yaml
+patches:
+- patch: |
+    apiVersion: v1
+    kind: ServiceAccount
+    metadata:
+      annotations:
+        azure.workload.identity/client-id: 60aeee65-3bad-4416-90b6-3fe8c002bbc2
+        azure.workload.identity/tenant-id: 5065c9ac-40a7-4f0b-9284-a95db9cdaab7
+  target:
+    kind: ServiceAccount
+    name: "(kustomize-controller)"
+- patch: |
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      labels:
+        azure.workload.identity/use: "true"
+    spec:
+      template:
+        metadata:
+          labels:
+            azure.workload.identity/use: "true"
+  target:
+    kind: Deployment
+    name: "(kustomize-controller)"
