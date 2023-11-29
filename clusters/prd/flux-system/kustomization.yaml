@@ -4,6 +4,7 @@ kind: Kustomization
 resources:
 - gotk-components.yaml
 - gotk-sync.yaml
+- ./kustomizations/customers.yaml
 patches:
 - patch: |
     apiVersion: v1
@@ -37,13 +38,6 @@ patches:
     metadata:
       name: all
     spec:
-
-      # Replace path=clusters/prd used during Flux bootstrap to
-      # enable watching clusters/prd/flux-system/kustomizations/
-      # for additional Flux Kustomizations without overlapping paths.
-      # See https://github.com/fluxcd/flux2/discussions/3801#discussioncomment-5623918
-      path: ./clusters/prd/flux-system
-
       decryption:
         provider: sops
         #secretRef:
