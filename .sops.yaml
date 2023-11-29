@@ -1,0 +1,5 @@
+---
+creation_rules:
+  - path_regex: .*(/|\\)prd(/|\\).*
+    azure_keyvault: https://kv-aks-ml-uks-prd.vault.azure.net/keys/sops-key-aks/676c8f8dcb15431690ac5f0c68d976aa
+    encrypted_regex: ^(data|stringData)$
