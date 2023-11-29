@@ -36,6 +36,13 @@ patches:
     metadata:
       name: all
     spec:
+
+      # Replace Flux bootstrap path clusters/prd to enable watching
+      # clusters/prd/flux-system/kustomizations/
+      # for additional Flux Kustomizations without overlapping paths.
+      # See https://github.com/fluxcd/flux2/discussions/3801#discussioncomment-5623918
+      path: ./clusters/prd/flux-system
+
       decryption:
         provider: sops
         #secretRef:
