@@ -1,6 +1,6 @@
 # clusters/prd/flux/README.md
 
-> **IMPORTANT**:
+> **IMPORTANT**
 >
 > The [flux-system](flux-system) directory is managed by Terraform using [flux_bootstrap_git resource](https://registry.terraform.io/providers/fluxcd/flux/latest/docs/resources/bootstrap_git) - DO NOT edit!
 >
