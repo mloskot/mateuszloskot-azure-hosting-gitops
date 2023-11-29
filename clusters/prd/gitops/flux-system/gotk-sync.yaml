@@ -20,7 +20,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m0s
-  path: ./clusters/prd
+  path: ./clusters/prd/gitops
   prune: true
   sourceRef:
     kind: GitRepository
