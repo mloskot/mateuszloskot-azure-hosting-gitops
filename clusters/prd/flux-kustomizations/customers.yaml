@@ -8,7 +8,7 @@ spec:
   decryption:
     provider: sops
   dependsOn:
-  - name: flux-system
+  - name: control-plane
   interval: 5m
   path: ./clusters/prd/customers
   prune: true
