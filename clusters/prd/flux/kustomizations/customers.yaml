@@ -4,6 +4,8 @@ kind: Kustomization
 metadata:
   name: customers
   namespace: flux-system
+  annotations:
+    kustomize.toolkit.fluxcd.io/prune: disabled
 spec:
   decryption:
     provider: sops
