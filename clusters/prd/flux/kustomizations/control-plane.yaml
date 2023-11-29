@@ -4,6 +4,8 @@ kind: Kustomization
 metadata:
   name: control-plane
   namespace: flux-system
+  annotations:
+    kustomize.toolkit.fluxcd.io/prune: disabled
 spec:
   decryption:
     provider: sops
@@ -11,7 +13,7 @@ spec:
   - name: flux-system
   interval: 5m
   path: ./clusters/prd/control-plane
-  prune: true
+  prune: false
   sourceRef:
     kind: GitRepository
     name: flux-system
