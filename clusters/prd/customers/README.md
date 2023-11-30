@@ -2,9 +2,9 @@
 
 > **IMPORTANT**
 >
-> This directory and file is managed by Terraform using [github_repository_file](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository_file) - DO NOT edit!
+> This directory and file is managed by Terraform using [github_repository_file](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository_file) - **DO NOT EDIT**!
 >
-> This directory is watched by Flux Kustomization [clusters/prd/flux/kustomizations/customers.yaml](../../..//clusters/prd/flux/kustomizations/customers.yaml) which is also managed by Terraform.
+> This directory is watched by Flux Kustomization [clusters/prd/flux/kustomizations/customers.yaml](../../../clusters/prd/flux/kustomizations/customers.yaml) which is also managed by Terraform.
 >
 > Add manifests of customer deployments here, so they can be managed by the Flux Kustomization.
 
